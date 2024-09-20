@@ -26,7 +26,7 @@
     <div class="container">
       <h1>Hi, I'm Cy</h1>
       <p>
-        I’m an IT specialist passionate about solving tech problems. My expertise ranges from...ahh who am I kidding, it's best to see my work for yourself! This site is hosted on S3 with Route53. Unfortunately Cloudfront ain't doing me no favours! -as of 12 Sept 2024
+        I’m an IT specialist passionate about solving tech problems. My expertise ranges from...ahh who am I kidding, it's best to see my work for yourself! This site is hosted on S3 with Route53. Unfortunately Cloudfront ain't doing me no favours! - as of <span id="currentDate"></span>
   
         <br>Outside of work, you’ll find me in tutorial hell trying to crack my head in coding! Currently pursuing courses in web dev and devops!
       </p>
@@ -34,8 +34,8 @@
       <!-- Add Images Below -->
       <div class="image-gallery">
         <img src="./Badges/aws-certified-cloud-practitioner.png" alt="AWS cloud essentials badge" class="about-image">
-        <img src="./Badges/hands-on-essentials-data-warehouse.png" alt="Snowflake Data Warehouse badge" class="about-image">
-        <img src="./Badges/information-technology-fundamentals.png" alt="IBM IT essentials badge" class="about-image">
+        <img src="./Badges/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Associate badge" class="about-image">
+        <img src="./Badges/comptia-network-ce-certification.1.png" alt="Comptia Network Plus badge" class="about-image">
       </div>
     </div>
   </section>
@@ -116,5 +116,21 @@
   <footer>
     <p>&copy; 2024 Cy's Portfolio</p>
   </footer>
+
+  <script>
+    // Function to format the date
+    function formatDate(date) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('en-GB', options).format(date);
+    }
+
+    // Get the current date
+    const today = new Date();
+    const formattedDate = formatDate(today);
+
+    // Set the date in the span
+    document.getElementById('currentDate').textContent = formattedDate;
+</script>
+
 </body>
 </html>
